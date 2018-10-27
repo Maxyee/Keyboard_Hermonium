@@ -1,0 +1,98 @@
+*{ 
+    margin: 0px; 
+    padding: 0px; 
+}
+body{
+  background: #b5592a;
+}
+
+.divider{
+	background-color: red;
+	height: 15px;
+	width: 1230px;
+	margin-top: -220px;
+	margin-left: 80px;
+}
+.top{
+  width: 1325px;
+  margin-left: 30px;
+  margin-right: 0px;
+  margin-top: 106px;
+  height: 505px;
+}
+
+.pi{
+	bottom:0px;
+	margin-left: 0px;
+}
+
+.piano{
+ 	margin-top: 900px;
+ 	border-top-width: 10px;
+ 	border-top-color: red;
+ 	bottom: 0px;
+ 	left: 0px;
+ 	margin-right: 500px;
+ 	width:fixed;
+ 	position: absolute;
+}
+
+.white {
+    fill:white;
+    stroke:black;
+    stroke-width:1;
+    cursor:pointer;
+    margin:2px;
+}
+
+.white:hover {
+  fill:#9e9e9e;
+  stroke:lightblue;
+  cursor:pointer;
+  stroke-width:1;
+  outline: black solid 1px;
+}
+
+.black {
+  fill:black;
+  stroke-width:1;
+  cursor:pointer;
+  margin:2px;
+  padding: 2px;
+}
+
+.black:hover {
+  fill:#515151;
+  stroke:lightblue;
+  stroke-width:1;
+  outline: black solid 1px;
+}
+
+.keysNumbers {
+  color: black;
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bold;
+  z-index: 10;
+  width: 740px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between 50px;
+  border-spacing: 2px;
+  margin-left: 200px;
+  margin-top: 300px;
+}
+
+.keysNotes {
+  color: gray;
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bold;
+  z-index: 13;
+  width: 740px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-left: 200px;
+  margin-top: 300px;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+    <head>
+      <link rel="stylesheet" href="Css/style.css" type="text/css">
+      
+      <script type="text/javascript">
+              function play(){
+                var audio = document.getElementById("audio");
+                audio.play();
+              }
+              window.addEventListener('keydown', function(e){ 
+                  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+                  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+                  if (!audio) return;
+                  audio.currentTime = 0;
+                  audio.play();
+                  key.classList.add('active');
+              });
+      </script>
+
+    </head>
+      <body>
+        
+          <img src="Cap.png" class="top">
+        
+        
+        
+          <div class="divider"></div>
+
+          <audio data-key="65" id="c_octave1_audio" src="middle_c.mp3"></audio>
+          <audio data-key="49" id="c_octave1_sharp_audio" src="mid_c_sharp.mp3"></audio>
+          <audio data-key="83" id="d_octave1_audio" src="middle_d.mp3"></audio>
+          <audio data-key="50" id="d_octave1_sharp_audio" src="mid_d_sharp.mp3"></audio>
+          <audio data-key="68" id="e_octave1_audio" src="middle_e.mp3"></audio>
+          <audio data-key="70" id="f_octave1_audio" src="middle_f.mp3"></audio>
+          <audio data-key="51" id="f_octave1_sharp_audio" src="mid_f_sharp.mp3"></audio>
+          <audio data-key="71" id="g_octave1_audio" src="middle_g.mp3"></audio>
+          <audio data-key="52" id="g_octave1_sharp_audio" src="mid_g_sharp.mp3"></audio>
+          <audio data-key="72" id="a_octave1_audio" src="middle_a.mp3"></audio>
+          <audio data-key="53" id="a_octave1_sharp_audio" src="mid_a_sharp.mp3"></audio>
+          <audio data-key="74" id="b_octave1_audio" src="middle_b.mp3"></audio>
+          
+          <audio data-key="75" id="c_octave2_audio" src="high_c.mp3"></audio>
+          <audio data-key="54" id="c_octave2_sharp_audio" src="high_c_sharp.mp3"></audio>
+          <audio data-key="76" id="d_octave2_audio" src="high_d.mp3"></audio>
+          <audio data-key="55" id="d_octave2_sharp_audio" src="high_d_sharp.mp3"></audio>
+          <audio data-key="81" id="e_octave2_audio" src="high_e.mp3"></audio>
+          <audio data-key="87" id="f_octave2_audio" src="high_f.mp3"></audio>
+          <audio data-key="56" id="f_octave2_sharp_audio" src="high_f_sharp.mp3"></audio>
+          <audio data-key="69" id="g_octave2_audio" src="high_g.mp3"></audio>
+          <audio data-key="57" id="g_octave2_sharp_audio" src="high_g_sharp.mp3"></audio>
+          <audio data-key="82" id="a_octave2_audio" src="high_a.mp3"></audio>
+          <audio data-key="48" id="a_octave2_sharp_audio" src="high_a_sharp.mp3"></audio>
+          <audio data-key="84" id="b_octave2_audio" src="high_b.mp3"></audio>
+          <audio data-key="89" id="c_octave2_audio" src="high_c.mp3"></audio>
+          <audio data-key="192" id="c_octave2_sharp_audio" src="high_c_sharp.mp3"></audio>
+          <audio data-key="85" id="d_octave2_audio" src="high_d.mp3"></audio>
+          <audio data-key="109" id="d_octave2_sharp_audio" src="high_d_sharp.mp3"></audio>
+          <audio data-key="73" id="e_octave2_audio" src="high_e.mp3"></audio>
+          <audio data-key="79" id="f_octave2_audio" src="high_f.mp3"></audio>
+          <audio data-key="187" id="c_octave2_audio" src="high_c.mp3"></audio>
+          <audio data-key="80" id="c_octave2_sharp_audio" src="high_c_sharp.mp3"></audio>
+          <audio data-key="8" id="d_octave2_audio" src="high_d.mp3"></audio>
+          <audio data-key="90" id="d_octave2_sharp_audio" src="high_d_sharp.mp3"></audio>
+          <audio data-key="219" id="e_octave2_audio" src="high_e.mp3"></audio>
+          <audio data-key="88" id="f_octave2_audio" src="high_f.mp3"></audio>
+          <audio data-key="67" id="f_octave2_sharp_audio" src="high_f_sharp.mp3"></audio>
+          <audio data-key="221" id="g_octave2_audio" src="high_g.mp3"></audio>
+          <audio data-key="86" id="g_octave2_sharp_audio" src="high_g_sharp.mp3"></audio>
+          <audio data-key="220" id="a_octave2_audio" src="high_a.mp3"></audio>
+          <audio data-key="66" id="a_octave2_sharp_audio" src="high_a_sharp.mp3"></audio>
+          <audio data-key="78" id="b_octave2_audio" src="high_b.mp3"></audio>
+          
+        <svg class="piano" height="274" width="fixed" top="1000">
+              <polygon points="140,10 170,10 170,100 185,100 185,220 140,220 140,10" class="white"  id="c" data-key="65"/>
+              <polygon points="185,100 200,100 200,10 215,10 215,100 230,100 230,220 185,220 185,100" class="white" data-key="83" id="d" />
+              <polygon points="245,10 275,10 275,220 230,220 230,100 245,100 245,10" class="white" data-key="68" id="e"/>
+              <polygon points="275,10 305,10 305,100 320,100 320,220 275,220 275,10" class="white" data-key="70" id="f"/>
+              <polygon points="320,100 335,100 335,10 350,10 350,100 375,100 375,220 320,220 320,100" class="white" data-key="71" id="g"/>
+              <polygon points="365,100 380,100 380,10 395,10 395,100 410,100 410,220 365,220 365,100" class="white" data-key="72" id="a"/>
+              <polygon points="410,100 425,100 425,10 455,10 455,220 410,220 410,100" class="white" data-key="74" id="b"/>
+              <polygon points="455,10 485,10 485,100 500,100 500,220 455,220 455,10" class="white" data-key="75" id="key5"/>
+              <polygon points="500,100 515,100 515,10 530,10 530,100 545,100 545,220 500,220" class="white" data-key="76" id="key5"/>
+              <polygon points="545,100 560,100 560,10 590,10 590,220 545,220 545,100" class="white" data-key="81" id="key5"/>
+              <polygon points="590,10 620,10 620,100 635,100 635,220 590,220 590,10" class="white" data-key="87" id="key5"/>
+              <polygon points="635,100 650,100 650,10 665,10 665,100 680,100 680,220 635,220 635,100" class="white" data-key="69" id="key5"/>
+              <polygon points="680,100 695,100 695,10 710,10 710,100 725,100 725,220 680,220 680,100" class="white" data-key="82" id="key5"/>
+              <polygon points="725,100 740,100 740,10 770,10 770,220 725,220 725,100" class="white" data-key="84" id="key5"/>
+              <polygon points="770,10 800,10 800,100 815,100 815,220 770,220 770,10" class="white" data-key="89" id="key5"/>
+              <polygon points="815,100 830,100 830,10 845,10 845,100 860,100 860,220 815,220 815,100" class="white" data-key="85" id="key5"/>
+              <polygon points="860,100 875,100 875,10 905,10 905,220 860,220 860,100" class="white" data-key="73" id="key5"/>
+              <polygon points="905,10 935,10 935,100 950,100 950,220 905,220 905,10" class="white" data-key="79" id="key5"/>
+              <polygon points="950,100 965,100 965,10 980,10 980,100 995,100 995,220 950,220 950,100" class="white" data-key="80" id="key5"/>
+              <polygon points="995,100 1010,100 1010,10 1025,10 1025,100 1040,100 1040,220 995,220 995,100" class="white" data-key="90" id="key5"/>
+              <polygon points="1040,100 1055,100 1055,10 1085,10 1085,220 1040,220 1040,100" class="white" data-key="88" id="key5"/>
+              <polygon points="1085,10 1115,10 1115,100 1130,100 1130,220 1085,220 1085,10" class="white" data-key="67" id="key5"/>
+              <polygon points="1130,100 1145,100 1145,10 1160,10 1160,100 1175,100 1175,220 1130,220 1130,100" class="white" data-key="86" id="key5"/>
+              <polygon points="1175,100 1190,100 1190,10 1220,10 1220,220 1175,220 1175,100" class="white" data-key="66" id="key5"/>
+              <polygon points="1220,10 1260,10 1260,220 1220,220 1220,10" class="white" data-key="78" id="key5"/>
+
+              <polygon points="170,10 200,10 200,100 170,100 170,10" class="black" data-key="49" id="c_sharp"/>
+              <polygon points="215,10 245,10 245,100 215,100 215,10" class="black" data-key="50" id="d_sharp"/>
+              <polygon points="305,10 335,10 335,100 305,100 305,10" class="black" data-key="51" id="f_sharp"/>
+              <polygon points="350,10 380,10 380,100 350,100 350,10" class="black" data-key="52" id="g_sharp"/>
+              <polygon points="395,10 425,10 425,100 395,100 395,10" class="black" data-key="53" id="a_sharp"/>
+              <polygon points="485,10 515,10 515,100 485,100 485,10" class="black" data-key="54" id="key4"/>
+              <polygon points="530,10 560,10 560,100 530,100 530,10" class="black" data-key="55" id="key4"/>
+              <polygon points="620,10 650,10 650,100 620,100 620,10" class="black" data-key="56" id="key4"/>
+              <polygon points="665,10 695,10 695,100 665,100 665,10" class="black" data-key="57" id="key4"/>
+              <polygon points="710,10 740,10 740,100 710,100 710,10" class="black" data-key="48" id="key4"/>
+              <polygon points="800,10 830,10 830,100 800,100 800,10" class="black" data-key="192" id="key4"/>
+              <polygon points="845,10 875,10 875,100 845,100 845,10" class="black" data-key="109" id="key4"/>
+              <polygon points="935,10 965,10 965,100 935,100 935,10" class="black" data-key="187" id="key4"/>
+              <polygon points="980,10 1010,10 1010,100 980,100 980,10" class="black" data-key="8" id="key4"/>
+              <polygon points="1025,10 1055,10 1055,100 1025,100 1025,10" class="black" data-key="219" id="key4"/>
+              <polygon points="1115,10 1145,10 1145,100 1115,100 1115,10" class="black" data-key="221" id="key4"/>
+              <polygon points="1160,10 1190,10 1190,100 1160,100 1160,10" class="black" data-key="220" id="key4"/>
+        </svg>
+
+      </body>
+</html>
